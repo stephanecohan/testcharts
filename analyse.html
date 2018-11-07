@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>analyse | amCharts</title>
+		<meta name="description" content="chart created using amCharts live editor" />
+		
+		<!-- amCharts javascript sources -->
+		<script src="https://www.amcharts.com/lib/3/amcharts.js" type="text/javascript"></script>
+		<script src="https://www.amcharts.com/lib/3/serial.js" type="text/javascript"></script>
+		
+
+		<!-- amCharts javascript code -->
+		<script type="text/javascript">
+			AmCharts.makeChart("chartdiv",
+				{
+					"type": "serial",
+					"categoryField": "date",
+					"dataDateFormat": "YYYY-MM-DD",
+					"colors": [
+						"#999999",
+						"#FFFFFF",
+						"#FFFFFF",
+						"#0D8ECF",
+						"#2A0CD0",
+						"#CD0D74",
+						"#CC0000",
+						"#00CC00",
+						"#0000CC",
+						"#DDDDDD",
+						"#999999",
+						"#333333",
+						"#990000"
+					],
+					"backgroundColor": "#333333",
+					"borderColor": "#333333",
+					"color": "#FFFFFF",
+					"creditsPosition": "top-right",
+					"fontFamily": "Roboto",
+					"fontSize": 13,
+					"categoryAxis": {
+						"parseDates": true,
+						"axisThickness": 0,
+						"tickLength": 0
+					},
+					"trendLines": [],
+					"graphs": [
+						{
+							"fillAlphas": 0.7,
+							"gapPeriod": 1,
+							"id": "AmGraph-1",
+							"lineAlpha": 0,
+							"title": "graph 1",
+							"type": "column",
+							"valueField": "column-1"
+						},
+						{
+							"fillAlphas": 0.7,
+							"id": "AmGraph-2",
+							"lineAlpha": 0,
+							"title": "graph 2",
+							"type": "column",
+							"valueField": "column-2"
+						},
+						{
+							"id": "AmGraph-3",
+							"periodSpan": 0,
+							"precision": -9,
+							"title": "graph 3",
+							"type": "smoothedLine",
+							"valueAxis": "ValueAxis-2",
+							"valueField": "column-3"
+						},
+						{
+							"id": "AmGraph-4",
+							"title": "graph 4",
+							"type": "smoothedLine",
+							"valueAxis": "ValueAxis-2",
+							"valueField": "column-4"
+						}
+					],
+					"guides": [],
+					"valueAxes": [
+						{
+							"duration": "ss",
+							"id": "ValueAxis-1",
+							"pointPosition": "middle",
+							"zeroGridAlpha": 0,
+							"axisAlpha": 0,
+							"axisColor": "#FFFFFF",
+							"axisThickness": 0,
+							"gridColor": "#FFFFFF",
+							"gridCount": 0,
+							"labelsEnabled": false,
+							"tickLength": 0,
+							"title": ""
+						},
+						{
+							"axisFrequency": 0,
+							"id": "ValueAxis-2",
+							"position": "right",
+							"zeroGridAlpha": 0,
+							"autoGridCount": false,
+							"axisColor": "#FFFFFF",
+							"axisThickness": 0,
+							"gridAlpha": 0,
+							"gridColor": "#FFFFFF",
+							"gridCount": 0,
+							"gridThickness": 0,
+							"labelsEnabled": false,
+							"showFirstLabel": false,
+							"showLastLabel": false,
+							"tickLength": 0
+						}
+					],
+					"allLabels": [],
+					"balloon": {},
+					"titles": [],
+					"dataProvider": [
+						{
+							"date": "2014-03-01",
+							"column-1": 8,
+							"column-2": "9",
+							"column-3": "1",
+							"column-4": "1"
+						},
+						{
+							"date": "2014-03-02",
+							"column-1": "12",
+							"column-2": "11",
+							"column-3": "2",
+							"column-4": "3"
+						},
+						{
+							"date": "2014-03-03",
+							"column-1": "10",
+							"column-2": "12",
+							"column-3": "1",
+							"column-4": "2"
+						},
+						{
+							"date": "2014-03-04",
+							"column-1": "11",
+							"column-2": "10",
+							"column-3": "3",
+							"column-4": "1"
+						},
+						{
+							"date": "2014-03-05",
+							"column-1": "9",
+							"column-2": "9",
+							"column-3": "2",
+							"column-4": "2"
+						},
+						{
+							"date": "2014-03-06",
+							"column-1": "8",
+							"column-2": "8",
+							"column-3": "1",
+							"column-4": "3"
+						},
+						{
+							"date": "2014-03-07",
+							"column-1": "10",
+							"column-2": "9",
+							"column-3": "2",
+							"column-4": "1"
+						}
+					]
+				}
+			);
+		</script>
+	</head>
+	<body>
+		<div id="chartdiv" style="width: 100%; height: 400px; background-color: #333333;" ></div>
+	</body>
+</html>
