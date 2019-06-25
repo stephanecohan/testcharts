@@ -1,154 +1,154 @@
 {
-            "name": "AEVA",
+"name": "AEVA",
+"children": [
+{
+    "name": "INSTRUCTION",
+    "children": [
+        {
+            "name": "OEL",
             "children": [
+                {"name": "ETP", "size": 6},
                 {
-                    "name": "INSTRUCTION",
+                    "name": "ETP",
+                    "size": 6,
                     "children": [
-                        {
-                            "name": "OEL",
-                            "children": [
-                                {"name": "ETP", "size": 6},
+                        {"name": "FdT", "size": 6},
+                    ]
+                },
+            ]
+        },
+        {
+            "name": "Pieces constitutives",
+            "children": [
+                {"name": "ETP", "size": 11}
+            ]
+        },
+        {
+            "name": "Declaration sinistre",
+            "children": [
+                {"name": "ETP", "size": 3}
+            ]
+        }
+    ]
+},
+{
+    "name": "ANO FLUX",
+    "children": [
+        {
+            "name": "Ouvertures",
+            "children": [
+                {"name": "ETP", "size": 2}
+            ]
+        },
+        {
+            "name": "Modif. Fiche caracteristiques",
+            "children": [
+                {"name": "ETP", "size": 2}
+            ]
+        },
+        {
+            "name": "Rejet decision sinistre",
+            "children": [
+                {"name": "ETP", "size": 3}
+            ]
+        }
+    ]
+},
+{
+    "name": "REGLEMENT",
+    "children": [
+        {
+            "name": "Ouvertures",
+            "children": [
+                {"name": "ETP", "size": 2}
+            ]
+        },
+        {
+            "name": "Modif. Fiche caracteristiques",
+            "children": [
+                {"name": "ETP", "size": 2}
+            ]
+        },
+        {
+            "name": "Rejet decision sinistre",
+            "children": [
+                {"name": "ETP", "size": 3}
+            ]
+        }
+    ]
+},
+{
+    "name": "DECISION",
+    "children": [
+        {
+            "name": "Reponse assureur",
+            "children": [
+                {"name": "ETP", "size": 3}
+            ]
+        },
+        {
+            "name": "CAPRI",
+            "children": [
+                {"name": "ETP", "size": 2}
+            ]
+        },
+        {
+            "name": "Retour Actis",
+            "children": [
+                {"name": "ETP", "size": 2}
+            ]
+        }
+    ]
+},
+{
+    "name": "VIE DU DOSSIER",
+    "children": [
+        {
+            "name": "Rapatriement",
+            "children": [
+                {"name": "ETP", "size": 2}
+            ]
+        },
+        {
+            "name": "Courrier groupe gestion",
+            "children": [
+                {"name": "ETP", "size": 2}
+            ]
+        },
+        {
+            "name": "Dossiers a controler",
+            "children": [
+                {"name": "ETP", "size": 2}
+            ]
+        },
+        {
+            "name": "Retour info medicale",
+            "children": [
+                {"name": "ETP", "size": 2}
+            ]
+        },
                                 {
-                                  "name": "ETP",
-                                  "size": 6,
-                                  "children": [
-                                      {"name": "FdT", "size": 6},
-                                  ]
-                                },
-                            ]
-                        },
-                        {
-                            "name": "Pieces constitutives",
-                            "children": [
-                                {"name": "ETP", "size": 11}
-                            ]
-                        },
-                        {
-                            "name": "Declaration sinistre",
-                            "children": [
-                                {"name": "ETP", "size": 3}
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "ANO FLUX",
-                    "children": [
-                        {
-                            "name": "Ouvertures",
-                            "children": [
-                                {"name": "ETP", "size": 2}
-                            ]
-                        },
-                        {
-                            "name": "Modif. Fiche caracteristiques",
-                            "children": [
-                                {"name": "ETP", "size": 2}
-                            ]
-                        },
-                        {
-                            "name": "Rejet decision sinistre",
-                            "children": [
-                                {"name": "ETP", "size": 3}
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "REGLEMENT",
-                    "children": [
-                        {
-                            "name": "Ouvertures",
-                            "children": [
-                                {"name": "ETP", "size": 2}
-                            ]
-                        },
-                        {
-                            "name": "Modif. Fiche caracteristiques",
-                            "children": [
-                                {"name": "ETP", "size": 2}
-                            ]
-                        },
-                        {
-                            "name": "Rejet decision sinistre",
-                            "children": [
-                                {"name": "ETP", "size": 3}
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "DECISION",
-                    "children": [
-                        {
-                            "name": "Reponse assureur",
-                            "children": [
-                                {"name": "ETP", "size": 3}
-                            ]
-                        },
-                        {
-                            "name": "CAPRI",
-                            "children": [
-                                {"name": "ETP", "size": 2}
-                            ]
-                        },
-                        {
-                            "name": "Retour Actis",
-                            "children": [
-                                {"name": "ETP", "size": 2}
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "VIE DU DOSSIER",
-                    "children": [
-                        {
-                            "name": "Rapatriement",
-                            "children": [
-                                {"name": "ETP", "size": 2}
-                            ]
-                        },
-                        {
-                            "name": "Courrier groupe gestion",
-                            "children": [
-                                {"name": "ETP", "size": 2}
-                            ]
-                        },
-                        {
-                            "name": "Dossiers a controler",
-                            "children": [
-                                {"name": "ETP", "size": 2}
-                            ]
-                        },
-                        {
-                            "name": "Retour info medicale",
-                            "children": [
-                                {"name": "ETP", "size": 2}
-                            ]
-                        },
-                                              {
-                            "name": "Fiche de liaison",
-                            "children": [
-                                {"name": "ETP", "size": 1}
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "CONTENTIEUX",
-                    "children": [
-                        {
-                            "name": "Traitements immediats",
-                            "children": [
-                                {"name": "ETP", "size": 1}
-                            ]
-                        },
-                                              {
-                            "name": "Reclamations",
-                            "children": [
-                                {"name": "ETP", "size": 0}
-                            ]
-                        }
-                    ]
-                }
+            "name": "Fiche de liaison",
+            "children": [
+                {"name": "ETP", "size": 1}
+            ]
+        }
+    ]
+},
+{
+    "name": "CONTENTIEUX",
+    "children": [
+        {
+            "name": "Traitements immediats",
+            "children": [
+                {"name": "ETP", "size": 1}
+            ]
+        },
+                                {
+            "name": "Reclamations",
+            "children": [
+                {"name": "ETP", "size": 0}
+            ]
+        }
+    ]
+}
