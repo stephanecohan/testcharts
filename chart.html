@@ -1,0 +1,80 @@
+<!DOCTYPE html><html><head><meta http-equiv="content-type" content="text-html; charset=utf-8">
+  <script type="text/javascript" src="https://jscharting.com/JSC/JSCharting.js"></script>
+  <script type="text/javascript" src="https://jscharting.com/JSC/modules/toolbar.js"></script>
+  <script type="text/javascript" src="https://jscharting.com/JSC/modules/types.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <title>JSCharting Circular Grid Chart</title>
+  <style type="text/css">
+  tspan {
+    font-family: 'Lato', sans-serif; !important;
+    font-size: 12px; !important;
+    color: #000000; !important;
+    
+  }
+  </style>
+  </head>
+  
+  <body>
+  <div id="chartDiv" style="max-width: 345px;height: 345px;margin: 20px auto"></div>
+  
+  <!DOCTYPE html><html><head><meta http-equiv="content-type" content="text-html; charset=utf-8"><script type="text/javascript" src="../JSC/JSCharting.js"></script><script type="text/javascript" src="../JSC/modules/toolbar.js"></script><script type="text/javascript" src="../JSC/modules/types.js"></script><title>JSCharting Circular Grid Chart</title><style type="text/css">/*CSS*/</style></head><body><div id="chartDiv" style="max-width: 450px;height: 400px;margin: 0px auto"></div><script type="text/javascript">/*
+    Circular chart axis grid features.
+    Learn how to:
+    
+      - Show gridlines on circular charts.
+      - Axis markers on circular charts.
+    */
+    // JS
+    var chart = JSC.chart('chartDiv',{
+      debug: true,
+      type: 'gauge',
+      legend_visible: false,
+      chartArea_boxVisible: false,
+      xAxis: {
+        spacingPercentage: 1.8,
+        orientation: 'opposite',
+        line: {width: 1,color: '#FFFFFF' },
+        markers: [{  value: [ 0, 0  ],  color: [ '#FFFFFF', 0  ]} ],
+        defaultTick: {
+          padding: 8,
+          gridLine: {  width: 1},
+          line: {  length: 6},
+          label: {  text: '%value'}
+        },
+        
+    /*China tick.*/
+        customTicks: [{  value: 2,  label_color: '#000000',  line_color: '#D8D8D8'} ]
+      },
+      yAxis: {
+        line: {width: 2,color: '#D8D8D8' },
+        markers: [{  value: [ 0, 20  ],  color: [ '#000000', 0  ]} ],
+        defaultTick: {gridLine: {  width: 1,  dashStyle: 'Dash'} },
+        scale: {invert: true,range: [  0,  18] }
+      },
+      series: [
+        {
+          type: 'column',
+          angle: {  start: 180,  sweep: 270},
+          shape_innerSize: '20%',
+          palette: 'waterMeadow',
+          name: 'Effectifs',
+          defaultPoint: {
+            marker: {
+              outline: {width: 2,color: '#000000' },
+              type: 'circle',
+              visible: false,
+              size: 10,
+              outline_width: 0
+            }
+          },
+          points: [
+            [ 'Ouvertures en ligne (6)', 6  ],
+            [ 'Pièces constitutives (11)', 11  ],
+            [ 'Déclarations sinistres (3)', 3  ],
+            [ 'Ouvertures Ano Flux (2)', 2  ],
+            [ 'Modif. fiche caractéritiques (2)', 2  ],
+            [ 'Rejet décisions sinistres (3)', 3  ]
+          ]
+        }
+      ]
+    });</script></body></html>
