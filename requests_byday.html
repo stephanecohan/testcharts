@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>chalk-column | amCharts</title>
+		<meta name="description" content="chart created using amCharts live editor" />
+		
+		<!-- amCharts javascript sources -->
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+		<script type="text/javascript" src="https://cdn.amcharts.com/lib/3/serial.js"></script>
+		
+
+		<!-- amCharts javascript code -->
+		<script type="text/javascript">
+			AmCharts.makeChart("chartdiv",
+				{
+					"type": "serial",
+					"categoryField": "category",
+					"autoMarginOffset": 20,	
+					"colors": [
+						"#CCCCCC"
+					],
+					"startDuration": 1,
+					"creditsPosition": "top-right",
+					"fontFamily": "Ubuntu",
+					"fontSize": 11,
+					"categoryAxis": {
+						"gridPosition": "start",
+						"tickPosition": "start",
+						"axisAlpha": 0,
+						"centerLabels": true,
+						"fontSize": 10,
+						"minHorizontalGap": 0,
+						"minVerticalGap": 0,
+						"gridAlpha": 0
+					},
+					"trendLines": [],
+					"graphs": [
+						{
+							"balloonText": "[[category]] : [[value]] K",
+							"fillAlphas": 0.9,
+							"id": "AmGraph-1",
+							"title": "graph 1",
+							"type": "column",
+							"valueField": "column-1"
+						}
+					],
+					"guides": [],
+					"valueAxes": [
+						{
+							"axisFrequency": 0,
+							"id": "ValueAxis-1",
+							"stackType": "regular",
+							"totalText": "",
+							"unit": " K",
+							"axisThickness": 0,
+							"labelOffset": 5,
+							"tickLength": 0,
+							"title": "Number of requests",
+							"titleBold": false,
+							"titleFontSize": 13
+						}
+					],
+					"allLabels": [],
+					"balloon": {},
+					"titles": [],
+					"dataProvider": [
+						{
+							"category": "MON",
+							"column-1": "200"
+						},
+						{
+							"category": "TUE",
+							"column-1": "150"
+						},
+						{
+							"category": "WED",
+							"column-1": "175"
+						},
+						{
+							"category": "THU",
+							"column-1": "100"
+						},
+						{
+							"category": "FRI",
+							"column-1": "125"
+						},
+						{
+							"category": "SAT",
+							"column-1": "200"
+						},
+						{
+							"category": "SUN",
+							"column-1": "150"
+						}
+					]
+				}
+			);
+		</script>
+	</head>
+	<body>
+		<div id="chartdiv" style="width: 100%; height: 320px; background-color: #FFFFFF;" ></div>
+	</body>
+</html>
