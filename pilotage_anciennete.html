@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>pilotage_stacked | amCharts</title>
+		<meta name="description" content="chart created using amCharts live editor" />
+		
+		<!-- amCharts javascript sources -->
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+		
+
+		<!-- amCharts javascript code -->
+		<script type="text/javascript">
+			AmCharts.makeChart("chartdiv",
+				{
+					"type": "serial",
+					"categoryField": "anciennete",
+					"columnWidth": 0.4,
+					"rotate": true,
+					"startDuration": 1,
+					"decimalSeparator": ",",
+					"fontFamily": "Roboto",
+					"fontSize": 14,
+					"theme": "light",
+					"categoryAxis": {
+						"gridPosition": "start"
+					},
+					"trendLines": [],
+					"graphs": [
+						{
+							"balloonText": "[[title]] of [[category]]:[[value]]",
+							"fillAlphas": 1,
+							"id": "AmGraph-1",
+							"legendPeriodValueText": "",
+							"legendValueText": "",
+							"title": "Nouveaux dossiers",
+							"type": "column",
+							"valueField": "Nouveaux dossiers"
+						},
+						{
+							"balloonText": "[[title]] of [[category]]:[[value]]",
+							"fillAlphas": 1,
+							"id": "AmGraph-2",
+							"title": "Acceptations",
+							"type": "column",
+							"valueField": "Acceptations"
+						},
+						{
+							"fillAlphas": 1,
+							"id": "AmGraph-3",
+							"title": "En attente de livraison",
+							"type": "column",
+							"valueField": "En attente de livraison"
+						},
+						{
+							"fillAlphas": 1,
+							"id": "AmGraph-4",
+							"title": "En anomalie de paiement",
+							"type": "column",
+							"valueField": "En anomalie de paiement"
+						},
+						{
+							"fillAlphas": 1,
+							"id": "AmGraph-5",
+							"title": "Au paiement",
+							"type": "column",
+							"valueField": "Au paiement"
+						},
+						{
+							"fillAlphas": 1,
+							"id": "AmGraph-6",
+							"title": "Payés",
+							"type": "column",
+							"valueField": "Payés"
+						}
+					],
+					"guides": [],
+					"valueAxes": [
+						{
+							"id": "ValueAxis-1",
+							"stackType": "regular",
+							"title": ""
+						}
+					],
+					"allLabels": [],
+					"balloon": {},
+					"legend": {
+						"enabled": true,
+						"useGraphSettings": true
+					},
+					"titles": [],
+					"dataProvider": [
+						{
+							"Payés": "1",
+							"anciennete": "< 2 jours",
+							"Nouveaux dossiers": "3",
+							"Acceptations": "2",
+							"En attente de livraison": "5",
+							"En anomalie de paiement": "1",
+							"Au paiement": "8"
+						},
+						{
+							"Payés": "10",
+							"anciennete": "Entre 2 et 5 jours",
+							"Nouveaux dossiers": "10",
+							"Acceptations": "5",
+							"En attente de livraison": "5",
+							"En anomalie de paiement": "5",
+							"Au paiement": "5"
+						},
+						{
+							"Payés": "0",
+							"anciennete": "> 5 jours",
+							"Nouveaux dossiers": "2",
+							"Acceptations": "2",
+							"En attente de livraison": "2",
+							"En anomalie de paiement": "0",
+							"Au paiement": "2"
+						}
+					]
+				}
+			);
+		</script>
+	</head>
+	<body>
+		<div id="chartdiv" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
+	</body>
+</html>
