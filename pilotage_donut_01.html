@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>chart created with amCharts | amCharts</title>
+		<meta name="description" content="chart created using amCharts live editor" />
+		
+		<!-- amCharts javascript sources -->
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/pie.js"></script>
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+		
+
+		<!-- amCharts javascript code -->
+		<script type="text/javascript">
+			AmCharts.makeChart("chartdiv",
+				{
+					"type": "pie",
+					"balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
+					"innerRadius": "60%",
+					"labelText": "[[title]] : [[value]] ([[percents]]%)",
+					"accessibleLabel": "[[title]] : [[value]] ([[percents]]%)",
+					"maxLabelWidth": 400,
+					"pullOutDuration": 0,
+					"sequencedAnimation": false,
+					"titleField": "category",
+					"valueField": "column-1",
+					"decimalSeparator": ",",
+					"fontFamily": "Roboto",
+					"fontSize": 15,
+					"theme": "light",
+					"allLabels": [],
+					"balloon": {},
+					"legend": {
+						"enabled": true,
+						"align": "center",
+						"equalWidths": false,
+						"markerType": "circle",
+						"spacing": 40,
+						"tabIndex": 0,
+						"valueText": ""
+					},
+					"titles": [
+						{
+							"id": "Title-1",
+							"size": 18,
+							"text": "AUJOURD'HUI"
+						}
+					],
+					"dataProvider": [
+						{
+							"category": "Nouveaux dossiers",
+							"column-1": "32"
+						},
+						{
+							"category": "Acceptations",
+							"column-1": "12"
+						},
+						{
+							"category": "En attente de livraison",
+							"column-1": "8"
+						},
+						{
+							"category": "En anomalie de paiement",
+							"column-1": "4"
+						},
+						{
+							"category": "Au paiement",
+							"column-1": "8"
+						},
+						{
+							"category": "Payés",
+							"column-1": "6"
+						}
+					]
+				}
+			);
+		</script>
+	</head>
+	<body>
+		<div id="chartdiv" style="width: 100%; height: 900px; background-color: #FFFFFF;" ></div>
+	</body>
+</html>
