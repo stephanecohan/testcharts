@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Livraions prévisionnelles</title>
+  
+  <script src="https:////www.amcharts.com/lib/4/core.js"></script>
+  <script src="https:////www.amcharts.com/lib/4/charts.js"></script>
+  <script src="https:////www.amcharts.com/lib/4/maps.js"></script>
+
+  <script>
+
+    am4core.ready(function() {
+        let chart = am4core.createFromConfig({
+                "type": "XYChart",
+                "data": [{
+                    "mois": "AVRIL 2022 : 33 véhicules (1 155 000 €)",
+                    "BERNOU C.": 10,
+                    "CLARCK A.": 4,
+                    "MILES J.": 17,
+                    "NELSON E.": 6,
+                    "FORT P.": 5,
+                    "RICARD J.": 4
+                }, {
+                    "mois": "MAI 2022 : 28 véhicules (980 000 €)",
+                    "BERNOU C.": 8,
+                    "CLARCK A.": 6,
+                    "MILES J.": 2,
+                    "NELSON E.": 5,
+                    "FORT P.": 3,
+                    "RICARD J.": 7
+                }, {
+                    "mois": "JUIN 2022 : 55 véhicules (1 925 000 €)",
+                    "BERNOU C.": 12,
+                    "CLARCK A.": 11,
+                    "MILES J.": 9,
+                    "NELSON E.": 11,
+                    "FORT P.": 7,
+                    "RICARD J.": 5
+                }],
+                "xAxes": [{
+                    "type": "CategoryAxis",
+                    "dataFields": {
+                        "category": "mois"
+                    },
+                    "renderer": {
+                        "grid": {
+                            "template": {
+                                "type": "Grid",
+                                "location": 0
+                            }
+                        },
+                        "minGridDistance": 20
+                    }
+                }],
+                "yAxes": [{
+                    "type": "ValueAxis",
+                    "renderer": {
+                        "maxLabelPosition": 0.98
+                    }
+                }],
+                "series": [{
+                    "type": "ColumnSeries",
+                    "name": "BERNOU C.",
+                    "columns": {
+                        "template": {
+                            "type": "Column",
+                            "strokeOpacity": 0,
+                            "strokeWidth": 0,
+                            "tooltipText": "{name} : {valueY} véhicules"
+                        }
+                    },
+                    "stacked": true,
+                    "dataFields": {
+                        "valueY": "BERNOU C.",
+                        "categoryX": "mois"
+                    },
+                    "calculatePercent": true,
+                    "fill": "#67b7dc",
+                    "stroke": "#FFFFFF",
+                    "strokeWidth": 0,
+                    "strokeOpacity": 0,
+                    "opacity": 1,
+                    "sequencedInterpolation": true,
+                    "sequencedInterpolationDelay": 100
+                }, {
+                    "type": "ColumnSeries",
+                    "name": "CLARCK A.",
+                    "columns": {
+                        "template": {
+                            "type": "Column",
+                            "strokeOpacity": 0,
+                            "strokeWidth": 0,
+                            "tooltipText": "{name} : {valueY} véhicules"
+                        }
+                    },
+                    "stacked": true,
+                    "dataFields": {
+                        "valueY": "CLARCK A.",
+                        "categoryX": "mois"
+                    },
+                    "calculatePercent": true,
+                    "fill": "#7CC9EC",
+                    "stroke": "#FFFFFF",
+                    "strokeWidth": 0,
+                    "strokeOpacity": 0,
+                    "sequencedInterpolation": true,
+                    "sequencedInterpolationDelay": 100
+                }, {
+                    "type": "ColumnSeries",
+                    "name": "MILES J.",
+                    "columns": {
+                        "template": {
+                            "type": "Column",
+                            "strokeOpacity": 0,
+                            "strokeWidth": 0,
+                            "tooltipText": "{name} : {valueY} véhicules"
+                        }
+                    },
+                    "dataFields": {
+                        "valueY": "MILES J.",
+                        "categoryX": "mois"
+                    },
+                    "fill": "#D87CEC",
+                    "stroke": "#FFFFFF",
+                    "strokeWidth": 0,
+                    "strokeOpacity": 0,
+                    "sequencedInterpolation": true,
+                    "sequencedInterpolationDelay": 100
+                }, {
+                    "type": "ColumnSeries",
+                    "name": "NELSON E.",
+                    "columns": {
+                        "template": {
+                            "type": "Column",
+                            "strokeOpacity": 0,
+                            "strokeWidth": 0,
+                            "tooltipText": "{name} : {valueY} véhicules"
+                        }
+                    },
+                    "stacked": true,
+                    "dataFields": {
+                        "valueY": "NELSON E.",
+                        "categoryX": "mois"
+                    },
+                    "fill": "#E68DF9",
+                    "stroke": "#FFFFFF",
+                    "strokeWidth": 0,
+                    "strokeOpacity": 0,
+                    "sequencedInterpolation": true,
+                    "sequencedInterpolationDelay": 100
+                }, {
+                    "type": "ColumnSeries",
+                    "name": "FORT P.",
+                    "columns": {
+                        "template": {
+                            "type": "Column",
+                            "strokeOpacity": 0,
+                            "strokeWidth": 0,
+                            "tooltipText": "{name} : {valueY} véhicules"
+                        }
+                    },
+                    "stacked": true,
+                    "dataFields": {
+                        "valueY": "FORT P.",
+                        "categoryX": "mois"
+                    },
+                    "fill": "#F0A3FF",
+                    "stroke": "#FFFFFF",
+                    "strokeWidth": 0,
+                    "strokeOpacity": 0,
+                    "sequencedInterpolation": true,
+                    "sequencedInterpolationDelay": 100
+                }, {
+                    "type": "ColumnSeries",
+                    "name": "RICARD J.",
+                    "columns": {
+                        "template": {
+                            "type": "Column",
+                            "strokeOpacity": 0,
+                            "strokeWidth": 0,
+                            "tooltipText": "{name} : {valueY} véhicules"
+                        }
+                    },
+                    "stacked": true,
+                    "dataFields": {
+                        "valueY": "RICARD J.",
+                        "categoryX": "mois"
+                    },
+                    "fill": "#F8BDFF",
+                    "stroke": "#FFFFFF",
+                    "strokeWidth": 0,
+                    "strokeOpacity": 0,
+                    "sequencedInterpolation": true,
+                    "sequencedInterpolationDelay": 100
+                }],
+                "titles": {
+                    "template": {
+                        "type": "Label"
+                    }
+                },
+
+
+
+
+                "legend": {
+                    "type": "Legend",
+                    "paddingTop": 32,
+                    "paddingBottom": 32,
+                    //"dataFields": {
+                        "data": [{
+                            "name": "Equipe 1",
+                            "fill":"#72A6B2"
+                        }, {
+                            "name": "Equipe 2",
+                            "fill": "#488BB2"
+                        }]
+                    //}
+                }
+            },
+            document.getElementById('chartdiv')
+        );
+        
+    });
+
+    
+  </script>
+</head>
+<body>
+  <div id="chartdiv" style="width:100%; height:718px;"></div>
+</body>
+</html>
