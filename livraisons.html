@@ -10,11 +10,20 @@
   <script src="https:////www.amcharts.com/lib/4/charts.js"></script>
   <script src="https:////www.amcharts.com/lib/4/maps.js"></script>
 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+        body {
+            font-family: "Roboto";
+        }
+    </style>
+
   <script>
 
     am4core.ready(function() {
         let chart = am4core.createFromConfig({
                 "type": "XYChart",
+                "fontFamily": "Roboto",
                 "data": [{
                     "mois": "AVRIL 2022 : 33 véhicules (1 155 000 €)",
                     "BERNOU C.": 10,
@@ -62,6 +71,7 @@
                     }
                 }],
                 "series": [{
+                    
                     "type": "ColumnSeries",
                     "name": "BERNOU C.",
                     "columns": {
@@ -69,7 +79,7 @@
                             "type": "Column",
                             "strokeOpacity": 0,
                             "strokeWidth": 0,
-                            "tooltipText": "{name} : {valueY} véhicules"
+                            "tooltipText": "{name}\n{valueY} véhicules (35 000 €)"
                         }
                     },
                     "stacked": true,
@@ -77,6 +87,7 @@
                         "valueY": "BERNOU C.",
                         "categoryX": "mois"
                     },
+                    "hiddenInLegend": false,
                     "calculatePercent": true,
                     "fill": "#67b7dc",
                     "stroke": "#FFFFFF",
@@ -93,7 +104,7 @@
                             "type": "Column",
                             "strokeOpacity": 0,
                             "strokeWidth": 0,
-                            "tooltipText": "{name} : {valueY} véhicules"
+                            "tooltipText": "{name}\n{valueY} véhicules (35 000 €)"
                         }
                     },
                     "stacked": true,
@@ -101,6 +112,7 @@
                         "valueY": "CLARCK A.",
                         "categoryX": "mois"
                     },
+                    "hiddenInLegend": false,
                     "calculatePercent": true,
                     "fill": "#7CC9EC",
                     "stroke": "#FFFFFF",
@@ -116,13 +128,14 @@
                             "type": "Column",
                             "strokeOpacity": 0,
                             "strokeWidth": 0,
-                            "tooltipText": "{name} : {valueY} véhicules"
+                            "tooltipText": "{name}\n{valueY} véhicules (35 000 €)"
                         }
                     },
                     "dataFields": {
                         "valueY": "MILES J.",
                         "categoryX": "mois"
                     },
+                    "hiddenInLegend": false,
                     "fill": "#D87CEC",
                     "stroke": "#FFFFFF",
                     "strokeWidth": 0,
@@ -137,7 +150,7 @@
                             "type": "Column",
                             "strokeOpacity": 0,
                             "strokeWidth": 0,
-                            "tooltipText": "{name} : {valueY} véhicules"
+                            "tooltipText": "{name}\n{valueY} véhicules (35 000 €)"
                         }
                     },
                     "stacked": true,
@@ -145,6 +158,7 @@
                         "valueY": "NELSON E.",
                         "categoryX": "mois"
                     },
+                    "hiddenInLegend": false,
                     "fill": "#E68DF9",
                     "stroke": "#FFFFFF",
                     "strokeWidth": 0,
@@ -159,7 +173,7 @@
                             "type": "Column",
                             "strokeOpacity": 0,
                             "strokeWidth": 0,
-                            "tooltipText": "{name} : {valueY} véhicules"
+                            "tooltipText": "{name}\n{valueY} véhicules (35 000 €)"
                         }
                     },
                     "stacked": true,
@@ -167,6 +181,7 @@
                         "valueY": "FORT P.",
                         "categoryX": "mois"
                     },
+                    "hiddenInLegend": false,
                     "fill": "#F0A3FF",
                     "stroke": "#FFFFFF",
                     "strokeWidth": 0,
@@ -181,7 +196,7 @@
                             "type": "Column",
                             "strokeOpacity": 0,
                             "strokeWidth": 0,
-                            "tooltipText": "{name} : {valueY} véhicules"
+                            "tooltipText": "{name}\n{valueY} véhicules (35 000 €)"
                         }
                     },
                     "stacked": true,
@@ -189,6 +204,7 @@
                         "valueY": "RICARD J.",
                         "categoryX": "mois"
                     },
+                    "hiddenInLegend": false,
                     "fill": "#F8BDFF",
                     "stroke": "#FFFFFF",
                     "strokeWidth": 0,
@@ -202,22 +218,23 @@
                     }
                 },
 
-
-
-
                 "legend": {
                     "type": "Legend",
+                    "useGraphSettings": false,
                     "paddingTop": 32,
-                    "paddingBottom": 32,
-                    //"dataFields": {
-                        "data": [{
-                            "name": "Equipe 1",
-                            "fill":"#72A6B2"
-                        }, {
-                            "name": "Equipe 2",
-                            "fill": "#488BB2"
-                        }]
-                    //}
+                    //"enabled": true,
+                    "data": [{
+                        "hiddenInLegend": false,
+                        "name": "Equipe 1",
+                        "fill":"#67b7dc"
+                    }, {
+                        "hiddenInLegend": false,
+                        "name": "Equipe 3",
+                        "fill": "#d87cec"
+                    }],
+
+
+                    
                 }
             },
             document.getElementById('chartdiv')
