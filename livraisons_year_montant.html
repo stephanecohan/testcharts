@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Livraions prévisionnelles</title>
+  
+  <script src="https:////www.amcharts.com/lib/4/core.js"></script>
+  <script src="https:////www.amcharts.com/lib/4/charts.js"></script>
+  <script src="https:////www.amcharts.com/lib/4/maps.js"></script>
+  <script src="https://www.amcharts.com/lib/4/lang/fr_FR.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+        body {
+            font-family: "Roboto";
+        }
+    </style>
+
+<script>
+    am4core.ready(function() {
+        let chart = am4core.createFromConfig({
+                "type": "XYChart",
+                "language": {
+                    "locale": {
+                    "_decimalSeparator": ",",
+                    "_thousandSeparator": " "
+                    }
+                },
+                "data": [{
+                    "mois": "JANVIER",
+                    "volume": 30,
+                    "valeur": 1050000
+                }, {
+                    "mois": "FEVRIER",
+                    "volume": 45,
+                    "valeur": 1575000
+                }, {
+                    "mois": "MARS",
+                    "volume": 28,
+                    "valeur": 980000
+                }, {
+                    "mois": "AVRIL",
+                    "volume": 43,
+                    "valeur": 1505000
+                }, {
+                    "mois": "MAI",
+                    "volume": 24,
+                    "valeur": 840000
+                }, {
+                    "mois": "JUIN",
+                    "volume": 35,
+                    "valeur": 1225000
+                }, {
+                    "mois": "JUILLET",
+                    "volume": 38,
+                    "valeur": 1330000
+                }, {
+                    "mois": "AOUT",
+                    "volume": 18,
+                    "valeur": 630000
+                }, {
+                    "mois": "SEPTEMBRE",
+                    "volume": 42,
+                    "valeur": 1470000
+                }, {
+                    "mois": "OCTOBRE",
+                    "volume": 36,
+                    "valeur": 1260000
+                }, {
+                    "mois": "NOVEMBRE",
+                    "volume": 28,
+                    "valeur": 980000
+                }, {
+                    "mois": "DECEMBRE",
+                    "volume": 32,
+                    "valeur": 1120000
+                }],
+                "xAxes": [{
+                "paddingTop": 16,
+                "type": "CategoryAxis",
+                "dataFields": {
+                    "category": "mois"
+                },
+                "renderer": {
+                    "grid": {
+                        "template": {
+                            "type": "Grid",
+                            "location": 0
+                        }
+                    },
+                    "minGridDistance": 20
+                }
+                }],
+                "yAxes": [{
+                    "type": "ValueAxis",
+                    "paddingRight": 16,
+                    "title": {
+                        "type": "Label",
+                        "text": "Montant total des dossiers (€)"
+                    },
+                    "min": 0,
+                    "renderer": {
+                        "maxLabelPosition": 0.98
+                    }
+                }],
+                "series": [{
+                    "type": "ColumnSeries",
+                    "columns": {
+                        "template": {
+                            "type": "Column",
+                            "strokeOpacity": 0,
+                            "tooltipText": "{categoryX} \n{valueY} € ({valueY2} véhicules)",
+                            "tooltipPosition": "pointer"
+                        }
+                    },
+                    "dataFields": {
+                        "valueY": "valeur",
+                        "valueY2": "volume",
+                        "categoryX": "mois"
+                    },
+                        "sequencedInterpolation": true,
+                        "sequencedInterpolationDelay": 100
+                    }],
+                    /* "numberFormatter": {
+                        "type": "NumberFormatter",
+                        "forceCreate": true,
+                        "numberFormat": "# €"
+                     }, */
+                    /* "legend": {
+                        "type": "Legend"
+                    }, */
+                    "paddingLeft": 32,
+                    "paddingTop": 32,
+                    "paddingRight": 32,
+                    "paddingBottom": 32
+                },
+                document.getElementById('chartdiv')
+            );
+        });
+  </script>
+</head>
+<body>
+  <div id="chartdiv" style="width:100%; height:718px;"></div>
+</body>
+</html>
